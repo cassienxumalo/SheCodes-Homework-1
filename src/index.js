@@ -5,6 +5,10 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#windSpeed");
+  let iconElement = document.querySelector("#icon")
+
+
+  iconElement.innerHTML = '<img src="${response.data.condition.icon_url}" class="weather-icom" />'
 
   cityElement.innerHTML = response.data.city;
 temperatureElement.innerHTML = temperature;
